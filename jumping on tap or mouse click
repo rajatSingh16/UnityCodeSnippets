@@ -1,0 +1,9 @@
+//How to make a gameObject jump on tap or mouse click in unity
+//if you want to make jump the object on button click use this code
+
+Vector2 offset = (Vector3)rb.position -  Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y , 0));
+Debug.Log("Offset"+offset.ToString());
+
+// rb is my RigidBody2D reference for my gameObject
+rb.MovePosition(offset);
+// the offset.ToString(); statement will give to the new co ordinates after you click the game object with mouse

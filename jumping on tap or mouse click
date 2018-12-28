@@ -7,3 +7,13 @@ Debug.Log("Offset"+offset.ToString());
 // rb is my RigidBody2D reference for my gameObject
 rb.MovePosition(offset);
 // the offset.ToString(); statement will give to the new co ordinates after you click the game object with mouse
+
+
+
+// To gradually scale the object 
+float newScale;
+function Update()
+{
+    newScale = Mathf.Lerp(1, 5, Time.deltaTime / 10);
+    transform.localScale = Vector3(newScale, newScale, 1);
+}

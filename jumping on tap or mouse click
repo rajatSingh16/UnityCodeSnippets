@@ -17,3 +17,6 @@ function Update()
     newScale = Mathf.Lerp(1, 5, Time.deltaTime / 10);
     transform.localScale = Vector3(newScale, newScale, 1);
 }
+
+//to delete the instantiated objects in Untiy
+Destroy (clone, 1.0f); second param is for delay to delete
